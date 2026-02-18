@@ -1,0 +1,52 @@
+## YAML Template.
+---
+name: Multi-OS Testing - Judd Nikolai Rosayaga
+
+on:
+  release:
+    types: created
+  workflow_displatch: #put here!!!!
+  push:
+     branches:
+          - master
+          
+jobs:
+        Job 1:
+            name: test-ubuntu
+            runs-on: ubuntu-latest
+            steps:
+                
+                 - name: Printing ubuntu test
+                   run: echo Testing on Ubuntu....
+                   
+                 - name: Printing OS information
+                   run: uname -a
+                   
+                 - name: Creating a file
+                   run: echo "Ubuntu test by Judd Nikolai Rosayaga" > test-ubuntu.txt
+                   
+                 - name: Displaying File Contents
+                   run: cat test-ubuntu.txt
+                   
+                 - name: Done
+                   run: echo Ubuntu tests completed
+                   
+        Job 2:
+             name: test-windows
+             runs-on: windows-latest
+             steps:
+                 
+                 - name: Printing Windows Test
+                   run: echo Testing on Windows...
+                   
+                 - name: Dispaying OS inforamtion
+                   run: systeminfo
+                   
+                 - name: Creating a file
+                   run: echo Windows test by Judd Nikolai Rosayaga > test-windows.txt
+                   
+                 - name: Displaying file contents
+                   run: type test-windows.txt
+                   
+                 - name: Done
+                   run: echo Windows tests completed
