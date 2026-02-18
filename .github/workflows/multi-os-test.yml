@@ -11,7 +11,7 @@ on:
           - master
           
 jobs:
-        Job 1:
+        Job_1:
             name: test-ubuntu
             runs-on: ubuntu-latest
             steps:
@@ -31,7 +31,7 @@ jobs:
                  - name: Done
                    run: echo Ubuntu tests completed
                    
-        Job 2:
+        Job_2:
              name: test-windows
              runs-on: windows-latest
              steps:
